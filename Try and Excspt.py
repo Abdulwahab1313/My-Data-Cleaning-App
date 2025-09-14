@@ -17,9 +17,9 @@ if fl:
         st.text(f"you have the following columns as ur dirt \n {check_dirt}")
     elif option == "Clean Dirt":
         clean = see.dropna()
-        tb = clean.to_excel(r"C:\Users\HP\Downloads\test2.xlsx")
-        buffer = BytesIO()
-        clean.to_excel(buffer, engine ='openpyxl',index = False)
+        fs = io.BytesIO()
+with pd.ExcelWriter(fs, engine="openpyxl") as writer:
+    clean.to_excel(writer, index=False)
         pick = st.radio("Pick what type of Format you'll like to download",["Excel","csv"])
         if pick == "Excel":
             btn = st.download_button(
@@ -35,6 +35,7 @@ if fl:
                 data = tb2,
                 file_name = st.text_input("Enter your desired name") + ".csv"
             )
+
 
 
 
