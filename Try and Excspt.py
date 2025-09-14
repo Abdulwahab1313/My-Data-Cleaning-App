@@ -18,9 +18,9 @@ if fl:
     elif option == "Clean Dirt":
         clean = see.dropna()
         fs = io.BytesIO()
-with pd.ExcelWriter(fs, engine="openpyxl") as writer:
-    clean.to_excel(writer, index=False)
-        pick = st.radio("Pick what type of Format you'll like to download",["Excel","csv"])
+    with pd.ExcelWriter(fs, engine="openpyxl") as writer:
+   		clean.to_excel(writer, index=False)
+   		pick = st.radio("Pick what type of Format you'll like to download",["Excel","csv"])
         if pick == "Excel":
             btn = st.download_button(
                 label="click here to download the clean data",
@@ -35,6 +35,7 @@ with pd.ExcelWriter(fs, engine="openpyxl") as writer:
                 data = tb2,
                 file_name = st.text_input("Enter your desired name") + ".csv"
             )
+
 
 
 
