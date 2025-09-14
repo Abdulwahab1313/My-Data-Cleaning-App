@@ -31,7 +31,8 @@ data=buffer,file_name= st.text_input("Enter your desired name") +".xlsx",mime="a
                 label = "click to download the clean csv ",
                 data = tb2,
                 file_name = st.text_input("Enter your desired name") + ".csv"
-				)
+			)
+
 
 
 
