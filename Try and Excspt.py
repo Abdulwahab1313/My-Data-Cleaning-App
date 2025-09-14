@@ -26,12 +26,12 @@ if fl:
 				label="click here to download the clean data",
 data=buffer,file_name= st.text_input("Enter your desired name") +".xlsx",mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
 		elif pick == "csv":
-            tb2 = clean.to_csv()
-            btn = st.download_button(
-                label = "click to download the clean csv ",
+       		tb2 = clean.to_csv()
+			btn = st.download_button(label = "click to download the clean csv ",
                 data = tb2,
                 file_name = st.text_input("Enter your desired name") + ".csv"
 			)
+
 
 
 
