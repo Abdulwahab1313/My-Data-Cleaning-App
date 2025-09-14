@@ -22,8 +22,7 @@ if fl:
    		clean.to_excel(writer, index=False)
    		pick = st.radio("Pick what type of Format you'll like to download",["Excel","csv"])
    		if pick == "Excel":
-            btn = st.download_button(
-				label="click here to download the clean data",
+            btn = st.download_button(label="click here to download the clean data",
 data=buffer,file_name= st.text_input("Enter your desired name") +".xlsx",mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
 		elif pick == "csv":
        		tb2 = clean.to_csv()
@@ -31,6 +30,7 @@ data=buffer,file_name= st.text_input("Enter your desired name") +".xlsx",mime="a
                 data = tb2,
                 file_name = st.text_input("Enter your desired name") + ".csv"
 			)
+
 
 
 
